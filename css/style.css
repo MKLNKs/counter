@@ -1,0 +1,71 @@
+* {
+    box-sizing: border-box;
+    user-select: none;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font: 16px "Rubik Black", sans-serif;
+    height: 100vh;
+    background-color: lightblue;
+}
+
+.counter_block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    /*width: 25%;*/
+}
+
+.minus, .plus {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: cornflowerblue;
+    font-size: 50px;
+    cursor: pointer;
+    opacity: 0.8;
+    text-shadow: 0 2px 3px #1c1c1c;
+}
+
+.minus:hover, .plus:hover {
+    opacity: 1;
+}
+
+.minus:active, .plus:active {
+    text-shadow: 0 1px 0 #1c1c1c;
+}
+
+.counter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font: 70px "Rubik Black", sans-serif;
+    width: 150px;
+    height: 150px;
+    border-radius: 30px;
+    text-align: center;
+    color: gold;
+    text-shadow: 0 2px 3px #1c1c1c;
+    background-color: cornflowerblue;
+    box-shadow: inset 1px 1px 4px #1c1c1c;
+    border: none;
+    outline: none;
+    margin: 40px;
+}
+
+::selection {
+    background: lightblue;
+}
+
+/*прибираємо стрілки в type="number"*/
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    display: none;
+}
