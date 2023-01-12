@@ -15,13 +15,13 @@ window.addEventListener('keydown', (e) => {
 
 function plusOne() {
     counter.value++;
-    if (counter.value === String(Number.MAX_SAFE_INTEGER)) counter.value = '0';
+    if (Number(counter.value) === Number.MAX_SAFE_INTEGER) counter.value = '1';
     changeCounterWidth(counter.value.length);
 }
 
 function minusOne() {
     counter.value--;
-    if (counter.value === String(-1)) counter.value = '0';
+    if (counter.value === String(0)) counter.value = '1';
     changeCounterWidth(counter.value.length);
 }
 
@@ -37,7 +37,10 @@ function preventDefaultKeys() {
 
 function changeCounterWidth(size) {
     counter.addEventListener('input', (e) => {
-        if (e.target.value.length === 1) {
+        if (!counter.value || (parseInt(counter.style.width) > document.documentElement.clientWidth - 200) || Number(counter.value) > Number.MAX_SAFE_INTEGER) {
+            counter.style.width = '150px';
+            e.target.value = '1';
+        } else if (e.target.value.length < 3) {
             counter.style.width = '150px';
         } else counter.style.width = parseInt(counterWidth) + ((e.target.value.length - 2) * 50) + 'px';
     });
