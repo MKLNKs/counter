@@ -15,10 +15,12 @@
 
 .counter_block {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+}
 
-    /*width: 25%;*/
+.counter_elem {
+    flex: 0 1 33.333%;
 }
 
 .minus, .plus {
@@ -65,7 +67,41 @@
 }
 
 /*прибираємо стрілки в type="number"*/
+/*в Chrome*/
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
-    display: none;
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/*в Mozilla*/
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+
+@media (max-width: 555px) {
+    .counter_block {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .counter_form {
+        display: flex;
+        flex: 0 1 100%;
+        justify-content: center;
+    }
+
+    .minus {
+        flex: 0 1 50%;
+        order: 2;
+        font-size: 100px;
+    }
+
+    .plus {
+        flex: 0 1 50%;
+        order: 3;
+        font-size: 100px;
+    }
 }
