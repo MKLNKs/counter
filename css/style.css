@@ -1,7 +1,6 @@
 * {
     box-sizing: border-box;
     user-select: none;
-    font: 16px "Rubik Black", sans-serif;
 }
 
 .container {
@@ -13,13 +12,13 @@
     background-color: lightblue;
 }
 
-.counter_block {
+.counter__block {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.counter_elem {
+.counter__elem {
     flex: 0 1 33.333%;
 }
 
@@ -33,6 +32,8 @@
     cursor: pointer;
     opacity: 0.8;
     text-shadow: 0 2px 3px #1c1c1c;
+    font-family: Rubik,sans-serif;
+    font-weight: bold;
 }
 
 .minus:hover, .plus:hover {
@@ -60,6 +61,8 @@
     border: none;
     outline: none;
     margin: 40px;
+    font-family: Rubik,sans-serif;
+    font-weight: bold;
 }
 
 ::selection {
@@ -81,13 +84,13 @@ input[type="number"] {
 
 
 @media (max-width: 555px) {
-    .counter_block {
+    .counter__block {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
     }
 
-    .counter_form {
+    .counter__form {
         display: flex;
         flex: 0 1 100%;
         justify-content: center;
