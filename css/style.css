@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
     user-select: none;
+    font: 16px "Rubik Black", sans-serif;
 }
 
 .container {
@@ -8,7 +9,6 @@
     justify-content: center;
     align-items: center;
 
-    font: 16px "Rubik Black", sans-serif;
     height: 100vh;
     background-color: lightblue;
 }
@@ -48,7 +48,7 @@
     align-items: center;
     justify-content: center;
 
-    font: 70px "Rubik Black", sans-serif;
+    font-size: 70px;
     width: 150px;
     height: 150px;
     border-radius: 30px;
